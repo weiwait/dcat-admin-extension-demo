@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Admin\Controllers;
+
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 use Dcat\Admin\Admin;
@@ -15,3 +17,9 @@ Route::group([
     $router->get('/', 'HomeController@index');
 
 });
+
+Route::prefix(config('admin.route.prefix'))
+    ->middleware(config('admin.route.middleware'))
+    ->group(function () {
+        Route::resource('demo-croppers', DemoCropperController::class);
+    });

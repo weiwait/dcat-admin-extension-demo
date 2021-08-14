@@ -61,7 +61,7 @@ class DemoCropperController extends AdminController
         return Form::make(new DemoCropper(), function (Form $form) {
             $form->display('id');
             $form->cropper('cropper')->ratio(1);
-            $form->cropper('cropper2')->ratio(16 / 9);
+            $form->cropper('cropper2')->ratio(16 / 9)->help('支持多次调用');
             $form->image('image')->uniqueName()->autoUpload();
 
             $form->display('created_at');

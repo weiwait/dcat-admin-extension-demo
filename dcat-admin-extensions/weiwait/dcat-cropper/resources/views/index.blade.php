@@ -5,7 +5,7 @@
     <div class="{{$viewClass['field']}}">
         @include('admin::form.error')
 
-        <div class="web-uploader {{ $fileType }}">
+        <div class="web-uploader clearfix {{ $fileType }}">
             <label id="{{$column}}-img-pick" style="display: none;">
                 <div class="img-thumbnail"
                      style="width: 200px; height: 200px; display: flex; align-items: center; justify-content: center; cursor: pointer;">

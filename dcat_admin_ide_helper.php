@@ -159,7 +159,7 @@ namespace Dcat\Admin {
     class Show {}
 
     /**
-     
+     * @method \Weiwait\DcatCropper\Form\Field\Cropper cropper(...$params)
      */
     class Form {}
 

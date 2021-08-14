@@ -24,3 +24,13 @@ use Dcat\Admin\Show;
  * Admin::js('/packages/prettydocs/js/main.js');
  *
  */
+
+// 修改表格分页 per pages 样式
+Admin::style(<<<CSS
+    .box-footer .per-pages-selector span>a {
+        border-radius: 30px;
+        height: 32px;
+        background-color: #f0f0f1;
+        padding: 0.54rem 1.3rem !important;
+    }
+CSS);

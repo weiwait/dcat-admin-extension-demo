@@ -254,12 +254,12 @@ return [
     'upload' => [
 
         // Disk in `config/filesystem.php`.
-        'disk' => 'public',
+        'disk' => env('FILESYSTEM_DRIVER', 'public'),
 
         // Image and file upload path under the disk above.
         'directory' => [
-            'image' => 'images',
-            'file'  => 'files',
+            'image' => 'images/' . date('Y/m/d'),
+            'file'  => 'files/' . date('Y/m/d'),
         ],
     ],
 

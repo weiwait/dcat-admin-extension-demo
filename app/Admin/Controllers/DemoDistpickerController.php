@@ -65,9 +65,9 @@ class DemoDistpickerController extends AdminController
         return Form::make(new DemoDistpicker(), function (Form $form) {
             $form->display('id');
             $form->distpicker(['province', 'city', 'district'], 'China area')
-//                ->detail('detail')
-                ->coordinate(['longitude', 'latitude'])
-                ->disableMap();
+                ->detail('detail')
+                ->coordinate(['longitude', 'latitude']);
+//                ->disableMap();
 
             $form->display('created_at');
             $form->display('updated_at');

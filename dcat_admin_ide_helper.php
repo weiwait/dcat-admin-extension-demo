@@ -36,8 +36,14 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection password
      * @property Grid\Column|Collection avatar
      * @property Grid\Column|Collection remember_token
-     * @property Grid\Column|Collection crppper
+     * @property Grid\Column|Collection cropper
+     * @property Grid\Column|Collection cropper2
      * @property Grid\Column|Collection image
+     * @property Grid\Column|Collection province
+     * @property Grid\Column|Collection city
+     * @property Grid\Column|Collection district
+     * @property Grid\Column|Collection longitude
+     * @property Grid\Column|Collection latitude
      * @property Grid\Column|Collection uuid
      * @property Grid\Column|Collection connection
      * @property Grid\Column|Collection queue
@@ -73,8 +79,14 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection password(string $label = null)
      * @method Grid\Column|Collection avatar(string $label = null)
      * @method Grid\Column|Collection remember_token(string $label = null)
-     * @method Grid\Column|Collection crppper(string $label = null)
+     * @method Grid\Column|Collection cropper(string $label = null)
+     * @method Grid\Column|Collection cropper2(string $label = null)
      * @method Grid\Column|Collection image(string $label = null)
+     * @method Grid\Column|Collection province(string $label = null)
+     * @method Grid\Column|Collection city(string $label = null)
+     * @method Grid\Column|Collection district(string $label = null)
+     * @method Grid\Column|Collection longitude(string $label = null)
+     * @method Grid\Column|Collection latitude(string $label = null)
      * @method Grid\Column|Collection uuid(string $label = null)
      * @method Grid\Column|Collection connection(string $label = null)
      * @method Grid\Column|Collection queue(string $label = null)
@@ -115,8 +127,14 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection password
      * @property Show\Field|Collection avatar
      * @property Show\Field|Collection remember_token
-     * @property Show\Field|Collection crppper
+     * @property Show\Field|Collection cropper
+     * @property Show\Field|Collection cropper2
      * @property Show\Field|Collection image
+     * @property Show\Field|Collection province
+     * @property Show\Field|Collection city
+     * @property Show\Field|Collection district
+     * @property Show\Field|Collection longitude
+     * @property Show\Field|Collection latitude
      * @property Show\Field|Collection uuid
      * @property Show\Field|Collection connection
      * @property Show\Field|Collection queue
@@ -152,8 +170,14 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection password(string $label = null)
      * @method Show\Field|Collection avatar(string $label = null)
      * @method Show\Field|Collection remember_token(string $label = null)
-     * @method Show\Field|Collection crppper(string $label = null)
+     * @method Show\Field|Collection cropper(string $label = null)
+     * @method Show\Field|Collection cropper2(string $label = null)
      * @method Show\Field|Collection image(string $label = null)
+     * @method Show\Field|Collection province(string $label = null)
+     * @method Show\Field|Collection city(string $label = null)
+     * @method Show\Field|Collection district(string $label = null)
+     * @method Show\Field|Collection longitude(string $label = null)
+     * @method Show\Field|Collection latitude(string $label = null)
      * @method Show\Field|Collection uuid(string $label = null)
      * @method Show\Field|Collection connection(string $label = null)
      * @method Show\Field|Collection queue(string $label = null)
@@ -168,6 +192,7 @@ namespace Dcat\Admin {
 
     /**
      * @method \Weiwait\DcatCropper\Form\Field\Cropper cropper(...$params)
+     * @method \Weiwait\Distpicker\Form\Distpicker distpicker(...$params)
      */
     class Form {}
 

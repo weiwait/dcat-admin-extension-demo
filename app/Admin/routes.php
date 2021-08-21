@@ -22,4 +22,5 @@ Route::prefix(config('admin.route.prefix'))
     ->middleware(config('admin.route.middleware'))
     ->group(function () {
         Route::resource('demo-croppers', DemoCropperController::class);
+        Route::resource('demo-distpickers', DemoDistpickerController::class);
     });

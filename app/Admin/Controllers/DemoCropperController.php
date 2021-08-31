@@ -19,9 +19,9 @@ class DemoCropperController extends AdminController
     {
         return Grid::make(new DemoCropper(), function (Grid $grid) {
             $grid->column('id')->sortable();
-            $grid->column('cropper');
-            $grid->column('cropper2');
-            $grid->column('image');
+            $grid->column('cropper')->image();
+            $grid->column('cropper2')->image();
+            $grid->column('image')->image();
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
 

@@ -1,0 +1,32 @@
+{
+    "name": "weiwait/dcat-wechat-config",
+    "alias": "",
+    "description": "简版微信小程序信息快速便捷配置",
+    "type": "library",
+    "keywords": ["dcat-admin", "extension", "wecaht", "mini-program"],
+    "homepage": "https://github.com/weiwait/dcat-wechat-config",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "weiwait",
+            "email": "mail@weiwait.cn"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "dcat/laravel-admin": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Weiwait\\Wechat\\": "src/"
+        }
+    },
+    "extra": {
+        "dcat-admin": "Weiwait\\Wechat\\DcatWechatConfigServiceProvider",
+        "laravel": {
+            "providers": [
+                "Weiwait\\Wechat\\DcatWechatConfigServiceProvider"
+            ]
+        }
+    }
+}

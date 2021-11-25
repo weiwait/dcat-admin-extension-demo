@@ -3,6 +3,9 @@
 ### 演示地址
 [demo: http://dcat.weiwait.cn (admin:admin)](http://dcat.weiwait.cn/admin/demo-settings/create 'user: admin psw: admin')
 
+### 依赖扩展
+[overtrue/laravel-wechat](https://github.com/overtrue/laravel-wechat)
+
 ### 通过 composer 安装扩展
 ```shell
   composer require weiwait/dcat-wecaht-config

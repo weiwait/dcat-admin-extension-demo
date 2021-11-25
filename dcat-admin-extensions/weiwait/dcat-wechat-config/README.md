@@ -1,7 +1,7 @@
 # Dcat Admin Extension
 
 ### 演示地址
-[demo: http://dcat.weiwait.cn (admin:admin)](http://dcat.weiwait.cn/admin/demo-settings/create 'user: admin psw: admin')
+[demo: http://dcat.weiwait.cn (admin:admin)](http://dcat.weiwait.cn/admin/demo-settings 'user: admin psw: admin')
 
 ### 依赖扩展
 [overtrue/laravel-wechat](https://github.com/overtrue/laravel-wechat)

@@ -34,7 +34,7 @@ class WechatConfig extends Model
             return $data;
         }
 
-        if (!$value = Cache::get('setting.wechat.config.' . $keys)) {
+        if (null == $value = Cache::get('setting.wechat.config.' . $keys)) {
             $value = self::query()->where('key', $keys)->value('value');
 
             Cache::put('setting.wechat.config.' . $keys, $value, now()->addDay());

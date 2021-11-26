@@ -4,7 +4,7 @@
 [demo: http://dcat.weiwait.cn (admin:admin)](http://dcat.weiwait.cn/admin/demo-settings 'user: admin psw: admin')
 
 ### 依赖扩展
-[overtrue/laravel-wechat](https://github.com/overtrue/laravel-wechat)
+[overtrue/easywechat](https://www.easywechat.com/5.x/payment/)
 
 ### 通过 composer 安装扩展
 ```shell
@@ -21,6 +21,10 @@
         return $content->title('配置')
             ->body($tab->withCard());
     }
+
+    // 调用
+    \Weiwait\Wechat\Application::applet()->auth->session($code);
+    \Weiwait\Wechat\Application::pay();
 ```
 
 ### 通过一级菜单使用

@@ -13,6 +13,7 @@ use Dcat\Admin\Widgets\Tab;
 use Illuminate\Support\Facades\Mail;
 use Weiwait\DcatEasySms\Forms\SmsConfig;
 use Weiwait\DcatSmtp\Forms\SmtpConfig;
+use Weiwait\Filesystem\Forms\FilesystemConfig;
 use Weiwait\Wechat\Forms\WechatAppletConfig;
 
 class SettingController extends Controller
@@ -23,6 +24,7 @@ class SettingController extends Controller
         $tab->add('SMTP', new SmtpConfig());
         $tab->add('短信', new SmsConfig());
         $tab->add('微信小程序', new WechatAppletConfig());
+        $tab->add('文件存储', new FilesystemConfig());
 
         return $content->title('配置')
             ->body($tab->withCard());

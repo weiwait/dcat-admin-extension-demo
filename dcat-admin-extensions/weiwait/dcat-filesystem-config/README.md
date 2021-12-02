@@ -33,7 +33,7 @@
 
 ### 示例图片
 
-![示例图片](https://github.com/weiwait/images/blob/main/dcat-filesystem-config.png?raw=true)
+![示例图片](https://raw.githubusercontent.com/weiwait/images/main/dcat-filesystem-config.png)
 
 [comment]: <> (### Donate)
 

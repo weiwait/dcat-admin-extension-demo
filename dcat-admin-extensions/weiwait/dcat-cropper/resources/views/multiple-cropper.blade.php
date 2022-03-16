@@ -10,19 +10,19 @@
 
                 <div style="display: flex; flex-wrap: wrap;">
                     <template x-for="(img, ii) in images">
-                        <div class="img-thumbnail cropped-img-contain" draggable="true"
+                        <div class="img-thumbnail cropped-img-contain ml-nf-10" draggable="true"
                              x-on:dragover.throttle.500ms="croppedDragover(ii)" x-on:dragstart="currentDrag = ii">
                             <img x-bind:src="img" class="cropped-img" x-on:click="prepareCropper($event.target.src, ii)" draggable="false">
-                            <input name="{{ $name }}" x-bind:value="value[ii]" type="hidden"/>
+                            <input name="{{ $name }}[]" x-bind:value="value[ii]" type="hidden"/>
                         </div>
                     </template>
 
-                    <label x-show="value.length < 1" id="{{$column}}-img-pick" class="img-thumbnail cropped-img-contain">
+                    <label id="{{$column}}-img-pick"  class="img-thumbnail cropped-img-contain ml-nf-10">
                         <div>
                             <span style="font-size: 100px; color: #a6a6a6">+</span>
                         </div>
 
-                        <input x-model="pickInput" type="file" x-on:change="selected" style="display: none" id="{{$column}}-img-input" />
+                        <input x-model="pickInput" type="file" x-bind:multiple="multiple" x-on:change="selected" style="display: none" id="{{$column}}-img-input" />
                     </label>
                 </div>
             </div>
@@ -64,7 +64,3 @@
         </div>
     </div>
 </div>
-
-<script require="@weiwait.dcat-cropper" init="{!! $selector !!}">
-    (() => {})()
-</script>

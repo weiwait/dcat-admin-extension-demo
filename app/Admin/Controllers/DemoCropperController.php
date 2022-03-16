@@ -65,9 +65,13 @@ class DemoCropperController extends AdminController
                 ->resolution(['1:1' => [300, 300], '16:9' => [1920, 1080]]);
             $form->cropper('cropper2')->ratio(16 / 9)->help('支持多次调用');
             $form->image('image')->uniqueName()->autoUpload();
+            $form->multipleCropper('images')->ratio(1);
 
             $form->display('created_at');
             $form->display('updated_at');
+
+            $form->saving(function (Form $form) {
+            });
         });
     }
 }

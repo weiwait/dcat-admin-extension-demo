@@ -10,5 +10,9 @@ class DemoCropper extends Model
 {
 	use HasDateTimeFormatter;
     protected $table = 'demo_cropper';
-    
+
+    protected $casts = [
+        'images' => 'array',
+    ];
+
 }

@@ -11,7 +11,8 @@
 .ml-nf-10 {
     margin-left: 10px;
 }
-.ml-nf-10:first-child {
+
+.ml-nf-10:first-of-type {
     margin-left: 0!important;
 }
 

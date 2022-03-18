@@ -1,0 +1,32 @@
+{
+    "name": "weiwait/dcat-icon",
+    "alias": "",
+    "description": "Description...",
+    "type": "library",
+    "keywords": ["dcat-admin", "extension"],
+    "homepage": "https://github.com/weiwait/dcat-icon",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "your name",
+            "email": "your email"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "dcat/laravel-admin": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Weiwait\\DcatIcon\\": "src/"
+        }
+    },
+    "extra": {
+        "dcat-admin": "Weiwait\\DcatIcon\\DcatIconServiceProvider",
+        "laravel": {
+            "providers": [
+                "Weiwait\\DcatIcon\\DcatIconServiceProvider"
+            ]
+        }
+    }
+}

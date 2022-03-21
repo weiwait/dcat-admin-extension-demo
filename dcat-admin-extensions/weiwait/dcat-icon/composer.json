@@ -1,19 +1,19 @@
 {
     "name": "weiwait/dcat-icon",
     "alias": "",
-    "description": "Description...",
+    "description": "Dcat Admin 图标",
     "type": "library",
-    "keywords": ["dcat-admin", "extension"],
+    "keywords": ["dcat-admin", "extension", "icon", "图标"],
     "homepage": "https://github.com/weiwait/dcat-icon",
     "license": "MIT",
     "authors": [
         {
-            "name": "your name",
-            "email": "your email"
+            "name": "weiwait",
+            "email": "mail@weiwait.cn"
         }
     ],
     "require": {
-        "php": ">=8.0",
+        "php": ">=7.2",
         "dcat/laravel-admin": "~2.0"
     },
     "autoload": {

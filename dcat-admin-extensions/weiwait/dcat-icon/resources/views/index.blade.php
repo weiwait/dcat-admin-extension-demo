@@ -1,5 +1,5 @@
 <div class="{{$viewClass['form-group']}}"
-     x-data2="weiwait_icon()" x-init2="_init('{{$column}}', {{$icons}})">
+     x-data2="weiwait_icon()" x-init2="_init('{{$formId}}', {{$icons}}, '{{$value}}')">
 
     <div class="{{$viewClass['label']}} control-label">
         <span>{!! $label !!}</span>
@@ -13,23 +13,27 @@
 
                 <span class="input-group-prepend">
                     <span class="input-group-text bg-white">
-                        <i class='fa' x-bind:class="[value, type]"></i>
+                        <i class='fa' x-bind:class="value"></i>
                     </span>
                 </span>
 
-            <div class="dropdown" id="{{$column}}-icon-dropdown">
+            <div class="dropdown" id="{{$formId}}-icon-dropdown">
 
                 <input {!! $attributes !!} x-model="value" x-on:focus="focus()"/>
 
                 <div
                     class="dropdown-menu"
                     aria-labelledby="dropdownMenuLink">
+
+                    <div style="margin: 10px 10px">
+                        <input type="text" class="form-control" placeholder="Type to filter" x-model.debounce.500ms="keyword">
+                    </div>
                     <div style="width: 20rem; height: 20rem; display: flex; flex-wrap: wrap; overflow-y: scroll;" class="ml-50 mr-50">
-                        <template x-for="icon in icons">
+                        <template x-for="icon in filtered">
                             <div
                                 x-html="icon.icon"
                                 x-on:click="pick(icon.name, icon.type)"
-                                style="width: 1.8rem; height: 1.8rem; margin: 8px; font-size: 2rem; cursor: pointer; flex-grow: 1;">
+                                style="width: 1.8rem; height: 1.8rem; margin: 8px; font-size: 2rem; cursor: pointer;" x-bind:title="icon.name">
 
                             </div>
                         </template>

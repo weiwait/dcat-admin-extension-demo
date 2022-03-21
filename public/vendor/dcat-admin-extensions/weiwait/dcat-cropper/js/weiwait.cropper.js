@@ -1,11 +1,9 @@
 if (!window.weiwait_alpine_loaded) {
-
+    window.weiwait_alpine_loaded = true
     let alpine = document.createElement('script')
     alpine.src = '/vendor/dcat-admin-extensions/weiwait/dcat-cropper/js/weiwait.alpine.js'
     alpine.defer = true
     document.head.append(alpine)
-
-    window.weiwait_alpine_loaded = true
 }
 
 function weiwait_cropper() {

@@ -68,6 +68,9 @@ class DemoCropperController extends AdminController
             $form->image('image')->uniqueName()->autoUpload();
             $form->multipleCropper('images')->ratio(['1:1' => 1, '16:9' => 16/9]);
 
+            $form->icon('hello');
+            $form->oIcon('hi');
+
             $form->display('created_at');
             $form->display('updated_at');
 

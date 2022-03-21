@@ -27,6 +27,7 @@ class DcatIconServiceProvider extends ServiceProvider
 		Admin::css(\Storage::disk(config('admin.upload.disk'))->url('icons/icon-svg.css'));
 
 		Form::extend('icon', Icon::class);
+		Form::extend('oIcon', Form\Field\Icon::class);
 
 		Admin::requireAssets('@weiwait.dcat-icon');
 

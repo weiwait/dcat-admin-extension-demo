@@ -40,6 +40,7 @@ class Setting extends Form
             $this->appendSvg($fullName, $input['icon']);
         }
 
+        return $this->response()->success('保存成功');
     }
 
     protected function appendSvg($fullName, $icon)

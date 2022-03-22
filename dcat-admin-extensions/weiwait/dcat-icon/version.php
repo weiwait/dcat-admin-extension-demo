@@ -8,5 +8,8 @@ return [
     '1.0.1' => [
         '加入Seeder文件方便提交图标',
         'WeiwaitIconTableSeeder.php',
-    ]
+    ],
+    '1.0.2' => [
+        '一些优化',
+    ],
 ];

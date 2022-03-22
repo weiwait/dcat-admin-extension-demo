@@ -10,16 +10,16 @@ class ChinaArea extends \Illuminate\Database\Eloquent\Model
 
     public static function provinces()
     {
-        return self::query()->where('level', 1)->get();
+        return self::query()->where('level', 1)->get(['code', 'name', 'pcode']);
     }
 
     public static function cities()
     {
-        return self::query()->where('level', 2)->get();
+        return self::query()->where('level', 2)->get(['code', 'name', 'pcode']);
     }
 
     public static function districts()
     {
-        return self::query()->where('level', 3)->get();
+        return self::query()->where('level', 3)->get(['code', 'name', 'pcode']);
     }
 }

@@ -20,42 +20,17 @@ class Setting extends Form
     {
         $fullName = 'icon-svg-' . $input['name'];
 
+        if (!Storage::disk(config('admin.upload.disk'))->exists('icons/icon-svg.css')) {
+            WeiwaitIcon::generatingIcons();
+        }
+
         WeiwaitIcon::query()->updateOrCreate(
             ['name' => $fullName],
             ['icon' => $input['icon']]
         );
 
-        if (!Storage::disk(config('admin.upload.disk'))->exists('icons/icon-svg.css')) {
-            $stub = file_get_contents(__DIR__ . '/../resources/assets/css/index.css');
-
-            Storage::disk(config('admin.upload.disk'))
-                ->put('icons/icon-svg.css', $stub);
-
-            WeiwaitIcon::query()
-                ->where('type', WeiwaitIcon::SVG)
-                ->each(function (WeiwaitIcon $icon) {
-                    $this->appendSvg($icon->name, $icon->icon);
-                });
-        } else {
-            $this->appendSvg($fullName, $input['icon']);
-        }
+        WeiwaitIcon::appendSvg($fullName, $input['icon']);
 
         return $this->response()->success('保存成功');
-    }
-
-    protected function appendSvg($fullName, $icon)
-    {
-        $filename = 'icons/' . $fullName . '.svg';
-
-        Storage::disk(config('admin.upload.disk'))
-            ->put($filename, $icon);
-
-        $url = Storage::disk(config('admin.upload.disk'))->url($filename);
-        $background = <<<CSS
-.$fullName::before{background-image: url("$url");}
-CSS;
-
-        Storage::disk(config('admin.upload.disk'))
-            ->append('icons/icon-svg.css', $background);
     }
 }

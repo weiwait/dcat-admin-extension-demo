@@ -10,7 +10,7 @@ use Weiwait\Distpicker\Form\Distpicker;
 class DistpickerServiceProvider extends ServiceProvider
 {
 	protected $js = [
-        'js/index.js',
+        'js/weiwait.distpicker.js'
     ];
 	protected $css = [
 		'css/index.css',
@@ -26,6 +26,8 @@ class DistpickerServiceProvider extends ServiceProvider
 		parent::init();
 
 		Form::extend('distpicker', Distpicker::class);
+
+		Admin::requireAssets('@weiwait.dcat-distpicker');
 
         $this->publishable();
 	}

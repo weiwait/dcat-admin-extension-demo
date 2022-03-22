@@ -2,17 +2,18 @@
 
 namespace Weiwait\Distpicker\Http\Controllers;
 
-use Dcat\Admin\Layout\Content;
-use Dcat\Admin\Admin;
 use Illuminate\Routing\Controller;
+use Weiwait\Distpicker\Models\ChinaArea;
 
 class DistpickerController extends Controller
 {
-    public function index(Content $content)
+    public function index(): \Illuminate\Http\JsonResponse
     {
-        return $content
-            ->title('Title')
-            ->description('Description')
-            ->body(Admin::view('weiwait.distpicker::index'));
+
+        $provinces = ChinaArea::provinces()->map(fn(ChinaArea $item) => array_values($item->toArray()));
+        $cities = ChinaArea::cities()->map(fn(ChinaArea $item) => array_values($item->toArray()));
+        $districts = ChinaArea::districts()->map(fn(ChinaArea $item) => array_values($item->toArray()));
+
+        return response()->json(compact( 'provinces', 'cities', 'districts'));
     }
 }

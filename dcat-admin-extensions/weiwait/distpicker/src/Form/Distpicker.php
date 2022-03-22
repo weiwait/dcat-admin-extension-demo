@@ -33,13 +33,13 @@ class Distpicker extends Field
         if (3 != count($column))
             throw new \Exception('column length must be 3');
 
-        $provinces = ChinaArea::provinces();
-        $cities = ChinaArea::cities();
-        $districts = ChinaArea::districts();
+        //$provinces = ChinaArea::provinces();
+        //$cities = ChinaArea::cities();
+        //$districts = ChinaArea::districts();
 
         $this->areaId = 'id' . md5(join('', $column));
 
-        $this->addVariables(compact( 'provinces', 'cities', 'districts'));
+        //$this->addVariables(compact( 'provinces', 'cities', 'districts'));
 
         parent::__construct($column, $arguments);
     }
@@ -93,6 +93,7 @@ class Distpicker extends Field
             'longitudeColumn' => $this->longitudeColumn,
             'latitudeColumn' => $this->latitudeColumn,
             'disableMap' => $this->disableMap,
+            'regionsUrl' => route('dcat.admin.distpicker.regions'),
         ]);
     }
 }

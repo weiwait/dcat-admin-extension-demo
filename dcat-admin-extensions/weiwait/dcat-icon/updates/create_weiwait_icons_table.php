@@ -13,13 +13,15 @@ class CreateWeiwaitIcon extends Migration
      */
     public function up()
     {
-        Schema::create('weiwait_icons', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name')->comment('名称');
-            $table->text('icon')->comment('内容');
-            $table->unsignedTinyInteger('type')->default(0)->comment('类型');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('weiwait_icons')) {
+            Schema::create('weiwait_icons', function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('name')->comment('名称');
+                $table->text('icon')->comment('内容');
+                $table->unsignedTinyInteger('type')->default(0)->comment('类型');
+                $table->timestamps();
+            });
+        }
     }
 
     /**
@@ -29,6 +31,6 @@ class CreateWeiwaitIcon extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('weiwait_icons');
+        //Schema::dropIfExists('weiwait_icons');
     }
 }

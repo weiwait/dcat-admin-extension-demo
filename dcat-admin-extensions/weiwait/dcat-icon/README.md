@@ -32,7 +32,7 @@
 [comment]: <> (![示例图片]&#40;https://github.com/weiwait/images/blob/main/donate.png?raw=true&#41;)
 
 ### Other
-1. 如有无版权图标需要内置可以发送到邮箱或者开个issue
+1. 如有无版权图标需要内置可以发送到邮箱或者提交pr(seeder)
 2. 暂时仅支持svg，如无需求或者本人无需求不会增加
 
 ### Dcat-admin 扩展列表

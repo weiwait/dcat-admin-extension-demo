@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Admin\Forms\AuthForm;
 use App\Admin\Metrics\Examples;
 use App\Http\Controllers\Controller;
 use App\Mail\TestSmtpConfig;
@@ -15,6 +16,7 @@ use Weiwait\DcatEasySms\Forms\SmsConfig;
 use Weiwait\DcatSmtp\Forms\SmtpConfig;
 use Weiwait\Filesystem\Forms\FilesystemConfig;
 use Weiwait\Wechat\Forms\WechatAppletConfig;
+use Weiwait\DcatAuth\Setting as AuthSetting;
 
 class SettingController extends Controller
 {
@@ -25,6 +27,7 @@ class SettingController extends Controller
         $tab->add('短信', new SmsConfig());
         $tab->add('微信小程序', new WechatAppletConfig());
         $tab->add('文件存储', new FilesystemConfig());
+        $tab->add('站点配置', new AuthSetting());
 
         return $content->title('配置')
             ->body($tab->withCard());

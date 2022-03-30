@@ -1,0 +1,33 @@
+{
+    "name": "weiwait/dcat-auth",
+    "alias": "",
+    "description": "dcat-admin extension that added a captcha in the form of login page",
+    "type": "library",
+    "keywords": ["dcat-admin", "extension", "captcha"],
+    "homepage": "https://github.com/weiwait/dcat-auth",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "weiwait",
+            "email": "mail@weiwait.cn"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "dcat/laravel-admin": "~2.0",
+        "mews/captcha": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Weiwait\\DcatAuth\\": "src/"
+        }
+    },
+    "extra": {
+        "dcat-admin": "Weiwait\\DcatAuth\\DcatAuthServiceProvider",
+        "laravel": {
+            "providers": [
+                "Weiwait\\DcatAuth\\DcatAuthServiceProvider"
+            ]
+        }
+    }
+}

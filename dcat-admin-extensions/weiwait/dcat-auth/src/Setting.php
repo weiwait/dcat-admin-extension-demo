@@ -18,8 +18,8 @@ class Setting extends Form
     {
         admin_setting([
             'weiwait_auth.enable_captcha' => $input['enable_captcha'],
-            'weiwait_auth.background' => $input['background'],
-            'weiwait_auth.footer' => $input['footer'],
+            'weiwait_auth.background' => $input['background'] ?? null,
+            'weiwait_auth.footer' => $input['footer'] ?? null,
         ]);
 
         return $this

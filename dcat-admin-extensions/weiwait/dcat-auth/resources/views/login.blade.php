@@ -62,12 +62,16 @@
         line-height: 24px;
     }
 
+    body {
+        min-height: 720px!important;
+    }
+
     @if($config->get('background'))
     body {
         background-image: url("{{ \Illuminate\Support\Facades\Storage::url($config->get('background')) }}");
         background-repeat: no-repeat;
         background-size: cover;
-        min-height: 720px;
+        min-height: 720px!important;
     }
     @endif
 </style>

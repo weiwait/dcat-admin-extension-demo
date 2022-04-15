@@ -78,9 +78,26 @@
                     </div>
 
                     <div class="btn-group" role="group" aria-label="..." style="margin: 0 0 0 10px">
-                        <button type="button" class="btn btn-info" x-on:click="original()">原图</button>
-                        <button type="button" class="btn btn-info" x-on:click="cropping()" x-show="!is_cropping">裁剪</button>
-                        <button type="button" class="btn btn-info" x-on:click="cropping()" x-show="is_cropping">
+                        <button type="button" class="btn btn-info"
+                                x-on:click="original()" x-show="!is_cropping">
+                            原图
+                        </button>
+
+                        <button type="button" class="btn btn-info"
+                                x-on:click="cropping()"
+                                x-show="is_cropping">
+                            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                        </button>
+
+                        <button type="button" class="btn btn-info"
+                                x-on:click="cropping()"
+                                x-show="!is_cropping">
+                            裁剪
+                        </button>
+
+                        <button type="button" class="btn btn-info"
+                                x-on:click="cropping()"
+                                x-show="is_cropping">
                             <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
                         </button>
                     </div>

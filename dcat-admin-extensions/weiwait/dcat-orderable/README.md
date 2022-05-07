@@ -22,6 +22,8 @@ $grid->model()->orderBy('order');
 $grid->column('order')->sequencable();
 class Model implements \Spatie\EloquentSortable\Sortable
 {
+    use \Weiwait\DcatOrderable\SortableTrait
+
     protected array $sortable = [
         'order_column_name' => 'order',
         // alias: 'column' => 'order'
@@ -35,6 +37,8 @@ $grid->column('order')->sequencable();
 
 class Model implements \Spatie\EloquentSortable\Sortable
 {
+    use \Weiwait\DcatOrderable\SortableTrait
+    
     protected array $sortable = [
         'order_column_name' => 'order',
         // alias: 'column' => 'order'
@@ -57,6 +61,8 @@ $grid->filter(function ($filter) {
 
 class Model implements \Spatie\EloquentSortable\Sortable
 {
+    use \Weiwait\DcatOrderable\SortableTrait
+
     // an attribute of this model
     protected $parent_id;
 

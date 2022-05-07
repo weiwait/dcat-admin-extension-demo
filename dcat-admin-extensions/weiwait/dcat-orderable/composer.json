@@ -1,0 +1,32 @@
+{
+    "name": "weiwait/dcat-orderable",
+    "alias": "",
+    "description": "dcat-admin column extension for orderable",
+    "type": "library",
+    "keywords": ["dcat-admin", "extension"],
+    "homepage": "https://github.com/weiwait/dcat-orderable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "weiwait",
+            "email": "mail@weiwait.cn"
+        }
+    ],
+    "require": {
+        "php": ">=7.4.0",
+        "dcat/laravel-admin": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Weiwait\\DcatOrderable\\": "src/"
+        }
+    },
+    "extra": {
+        "dcat-admin": "Weiwait\\DcatOrderable\\DcatOrderableServiceProvider",
+        "laravel": {
+            "providers": [
+                "Weiwait\\DcatOrderable\\DcatOrderableServiceProvider"
+            ]
+        }
+    }
+}

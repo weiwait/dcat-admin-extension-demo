@@ -24,4 +24,6 @@ Route::prefix(config('admin.route.prefix'))
         Route::resource('demo-croppers', DemoCropperController::class);
         Route::resource('demo-distpickers', DemoDistpickerController::class);
         Route::resource('demo-settings', SettingController::class);
+        Route::resource('demo-orderable-firsts', OrderableFirstController::class);
+        Route::resource('demo-orderable-seconds', OrderableSecondController::class);
     });

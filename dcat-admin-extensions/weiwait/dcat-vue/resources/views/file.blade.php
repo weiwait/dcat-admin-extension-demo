@@ -12,6 +12,6 @@
     import app from '/vendor/dcat-admin-extensions/weiwait/dcat-vue/js/index.js';
     const App = app()
 
-    App.provide('provides', @json($provides))
+    App.provide('provides', @json($provides, true))
     App.mount('#{{ $id }}')
 </script>

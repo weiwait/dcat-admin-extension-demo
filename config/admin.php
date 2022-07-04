@@ -258,8 +258,8 @@ return [
 
         // Image and file upload path under the disk above.
         'directory' => [
-            'image' => 'images/' . date('Y/m/d'),
-            'file'  => 'files/' . date('Y/m/d'),
+            'image' => 'images',
+            'file'  => 'files',
         ],
     ],
 

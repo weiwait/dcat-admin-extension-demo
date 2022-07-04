@@ -1,9 +1,9 @@
 <?php
 
-namespace Weiwait\Filesystem\Forms;
+namespace Weiwait\DcatVue\Forms;
 
 use Dcat\Admin\Widgets\Form;
-use Weiwait\Filesystem\Models\FilesystemConfig as Model;
+use Weiwait\DcatVue\Models\FilesystemConfig as Model;
 
 class FilesystemConfig extends Form
 {

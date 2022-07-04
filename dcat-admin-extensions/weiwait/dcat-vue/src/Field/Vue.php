@@ -1,6 +1,6 @@
 <?php
 
-namespace Weiwait\DcatVue\Form;
+namespace Weiwait\DcatVue\Field;
 
 use Dcat\Admin\Form\Field;
 use Dcat\Admin\Support\Helper;

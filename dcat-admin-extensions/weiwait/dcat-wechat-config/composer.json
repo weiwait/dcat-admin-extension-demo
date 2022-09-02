@@ -15,7 +15,7 @@
     "require": {
         "php": ">=7.4",
         "dcat/laravel-admin": "~2.0",
-        "overtrue/wechat": "~5.0"
+        "w7corp/easywechat": "^6.7"
     },
     "autoload": {
         "psr-4": {

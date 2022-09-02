@@ -4,7 +4,7 @@
 [demo: http://dcat.weiwait.cn (admin:admin)](http://dcat.weiwait.cn/admin/demo-settings 'user: admin psw: admin')
 
 ### 依赖扩展
-[overtrue/easywechat](https://www.easywechat.com/5.x/payment/)
+[w7corp/easywechat](https://github.com/w7corp/easywechat)
 
 ### 通过 composer 安装扩展
 ```shell

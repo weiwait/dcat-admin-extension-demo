@@ -13,8 +13,10 @@ class WechatConfig extends Model
     const MINI_PROGRAM_SECRET = 'mini_program_secret';
     const WECHAT_PAYMENT_MCH_ID = 'wechat_payment_mch_id';
     const WECHAT_PAYMENT_KEY = 'wechat_payment_key';
+    const WECHAT_PAYMENT_KEY_V3 = 'wechat_payment_key_v3';
     const WECHAT_PAYMENT_CERT_PATH = 'wechat_payment_cert_path';
     const WECHAT_PAYMENT_KEY_PATH = 'wechat_payment_key_path';
+    const WECHAT_PAYMENT_PLATFORM_PATH = 'wechat_payment_platform_path';
 
     const INDEPENDENT = "independent";
 
@@ -69,6 +71,11 @@ class WechatConfig extends Model
             File::put(
                 storage_path('app/wechat-config/api_client_key.pem'),
                 $input[self::WECHAT_PAYMENT_KEY_PATH]
+            );
+
+            File::put(
+                storage_path('app/wechat-config/platform_certs.pem'),
+                $input[self::WECHAT_PAYMENT_PLATFORM_PATH]
             );
 
             self::set($input);

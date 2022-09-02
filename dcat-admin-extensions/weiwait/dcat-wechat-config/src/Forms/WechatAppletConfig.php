@@ -29,11 +29,13 @@ class WechatAppletConfig extends Form
         $this->text('mini_program_secret', '小程序密钥Secret')->required();
 
         $this->text('wechat_payment_mch_id', '商户号MchID');
-        $this->text('wechat_payment_key', '商户号密钥Key')
+        $this->text('wechat_payment_key', '商户号密钥Key(v2)')
             ->minLength(32)
             ->maxLength(32);
+        $this->text('wechat_payment_key', '商户号密钥Key(v3)');
         $this->textarea('wechat_payment_cert_path', '商户证书Cert');
         $this->textarea('wechat_payment_key_path', '商户证书Key');
+        $this->textarea('wechat_payment_platform_path', '平台证书platform(v3)');
     }
 
     /**

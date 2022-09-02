@@ -1,4 +1,4 @@
-@php($id = join('_', (array)$column) . '_' . Str::random(6))
+@php($id = join('_', (array)str_replace(['[', ']'], '', $name)) . '_' . Str::random(6))
 
 <div class="{{$viewClass['form-group']}}" >
 

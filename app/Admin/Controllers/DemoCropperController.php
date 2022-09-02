@@ -61,20 +61,29 @@ class DemoCropperController extends AdminController
     {
         return Form::make(new DemoCropper(), function (Form $form) {
             $form->display('id');
-            $form->file('cropper2')->mimeTypes('video/*');
-            $form->image('cropper')
+            $form->vFile('cropper2')->mimeTypes('video/*');
+            $form->vImage('cropper')
                 ->large()
                 ->jpeg(1)
                 ->ratio(16 / 9)
-                ->resolution(1920, 1080);
+                ->resolution(1920, 1080)
+                ->accept('images/png');
 //            $form->cropper('cropper2')->ratio(16 / 9)->help('支持多次调用');
             $form->image('image');
 //            $form->multipleCropper('images')->ratio(['1:1' => 1, '16:9' => 16/9])->jpeg()->limit(12);
 
-            $form->multipleImage('images')->options(['hello', 'world'])->required();
-            $form->dateRange('start', 'end', 'Date Range')->disableDates([
-                ['', '2022/01/01'], ['2022/02/1', '2022/02/16'], ['2022/08/01']
-            ])->required();
+            $form->vMultipleImage('images')->options(['hello', 'world'])->required();
+//            $form->dateRange('start', 'end', 'Date Range')->disableDates([
+//                ['', '2022/01/01'], ['2022/02/1', '2022/02/16'], ['2022/08/01']
+//            ])->required();
+
+            $form->table('tables', function (Form\NestedForm $form) {
+                $form->vImage('image');
+                $form->vFile('file');
+                $form->vTags('tags');
+                $form->vMultipleImage('multiple_images');
+                $form->vMultipleFile('multiple_files');
+            });
             $form->display('created_at');
             $form->display('updated_at');
 

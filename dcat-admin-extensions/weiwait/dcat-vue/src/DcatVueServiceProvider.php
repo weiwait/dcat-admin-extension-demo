@@ -36,16 +36,14 @@ class DcatVueServiceProvider extends ServiceProvider
         $this->hackConfigs();
 
 //		Form::extend('vue', Vue::class);
-		Form::extend('file', File::class);
-		Form::extend('multipleFile', MultipleFile::class);
-        Form::extend('image', Image::class);
-        Form::extend('multipleImage', MultipleImage::class);
-        Form::extend('tags', Tag::class);
-        Form::extend('dateRange', DateRange::class);
+		Form::extend('vFile', File::class);
+		Form::extend('vMultipleFile', MultipleFile::class);
+        Form::extend('vImage', Image::class);
+        Form::extend('vMultipleImage', MultipleImage::class);
+        Form::extend('vTags', Tag::class);
+//        Form::extend('dateRange', DateRange::class);
 
         Admin::asset()->css(Admin::asset()->getAlias('@weiwait.dcat-vue')['css']);
-
-        $this->publishable();
 	}
 
 	public function settingForm()
@@ -94,6 +92,8 @@ class DcatVueServiceProvider extends ServiceProvider
             ]);
 
             config()->set('filesystems.default', FilesystemConfig::get('disk', config('filesystems.default')));
+
+            config()->set('admin.auth.except', array_merge((array)config('admin.auth.except'), ['weiwait*']));
         });
 
         Event::listen('admin:booted', function () {

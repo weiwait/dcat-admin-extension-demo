@@ -72,7 +72,7 @@ class DemoCropperController extends AdminController
             $form->image('image');
 //            $form->multipleCropper('images')->ratio(['1:1' => 1, '16:9' => 16/9])->jpeg()->limit(12);
 
-            $form->vMultipleImage('images')->options(['hello', 'world'])->required();
+//            $form->vMultipleImage('images')->options(['hello', 'world']);
 //            $form->dateRange('start', 'end', 'Date Range')->disableDates([
 //                ['', '2022/01/01'], ['2022/02/1', '2022/02/16'], ['2022/08/01']
 //            ])->required();
@@ -83,7 +83,14 @@ class DemoCropperController extends AdminController
                 $form->vTags('tags');
                 $form->vMultipleImage('multiple_images');
                 $form->vMultipleFile('multiple_files');
+                $form->vKeyValue('images')->sortable();
             });
+
+//            $form->vList('images');
+            $form->vKeyValue('images')->serial()->sortable()->keys([
+                '一', '二', '三', '四', '五', '六', '七'
+            ])->list();
+
             $form->display('created_at');
             $form->display('updated_at');
 

@@ -37,4 +37,16 @@ return [
         '新增list表单组件',
         '新增keyValue表单组件',
     ],
+    '2.1.1' => [
+        '优化keyValue回显'
+    ],
+    '2.1.2' => [
+        '优化配置注入'
+    ],
+    '2.2.0' => [
+        '一些优化',
+        '新增行政区划选择',
+        'create_china_areas_table.php',
+        'ChinaAreaTableSeeder.php',
+    ],
 ];

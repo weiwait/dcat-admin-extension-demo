@@ -21,14 +21,23 @@ class DcatAuthServiceProvider extends ServiceProvider
 	{
 		parent::init();
 
-        config()->set('captcha.default.length', 4);
-        config()->set('captcha.default.height', 34);
-        config()->set('captcha.default.width', 100);
-        config()->set('captcha.default.quality', 100);
+        $this->injectConfigs();
 	}
 
 	public function settingForm()
 	{
 		return new Setting($this);
 	}
+
+    protected function injectConfigs()
+    {
+        if (is_file(app()->getCachedConfigPath())) {
+            return;
+        }
+
+        config()->set('captcha.default.length', 4);
+        config()->set('captcha.default.height', 34);
+        config()->set('captcha.default.width', 100);
+        config()->set('captcha.default.quality', 100);
+    }
 }

@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Storage;
 
 class DemoCropperController extends AdminController
 {
+    protected $title = '裁剪';
+
     /**
      * Make a grid builder.
      *
@@ -61,35 +63,31 @@ class DemoCropperController extends AdminController
     {
         return Form::make(new DemoCropper(), function (Form $form) {
             $form->display('id');
-            $form->vFile('cropper2')->mimeTypes('video/*');
-            $form->vImage('cropper')
+            $form->vFile('cropper2', '文件')->mimeTypes('video/*');
+            $form->vImage('cropper', '裁剪')
                 ->large()
                 ->jpeg(1)
                 ->ratio(16 / 9)
                 ->resolution(1920, 1080)
                 ->accept('images/png');
 //            $form->cropper('cropper2')->ratio(16 / 9)->help('支持多次调用');
-            $form->image('image');
+            $form->image('image', '原生图片');
 //            $form->multipleCropper('images')->ratio(['1:1' => 1, '16:9' => 16/9])->jpeg()->limit(12);
 
 //            $form->vMultipleImage('images')->options(['hello', 'world']);
-//            $form->dateRange('start', 'end', 'Date Range')->disableDates([
-//                ['', '2022/01/01'], ['2022/02/1', '2022/02/16'], ['2022/08/01']
-//            ])->required();
+            $form->vDateRange('start', 'end', '日期范围')->required();
 
-            $form->table('tables', function (Form\NestedForm $form) {
-                $form->vImage('image');
-                $form->vFile('file');
-                $form->vTags('tags');
-                $form->vMultipleImage('multiple_images');
-                $form->vMultipleFile('multiple_files');
-                $form->vKeyValue('images')->sortable();
-            });
+//            $form->table('tables', function (Form\NestedForm $form) {
+//                $form->vImage('image');
+//                $form->vFile('file');
+//                $form->vTags('tags');
+//                $form->vMultipleImage('multiple_images');
+//                $form->vMultipleFile('multiple_files');
+//                $form->vKeyValue('images')->sortable();
+//            });
 
 //            $form->vList('images');
-            $form->vKeyValue('images')->serial()->sortable()->keys([
-                '一', '二', '三', '四', '五', '六', '七'
-            ])->list();
+            $form->vKeyValue('images', '键值')->serial()->sortable();
 
             $form->display('created_at');
             $form->display('updated_at');

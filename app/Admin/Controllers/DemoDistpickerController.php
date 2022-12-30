@@ -10,6 +10,8 @@ use Dcat\Admin\Http\Controllers\AdminController;
 
 class DemoDistpickerController extends AdminController
 {
+    protected $title = '行政区划';
+
     /**
      * Make a grid builder.
      *
@@ -64,10 +66,18 @@ class DemoDistpickerController extends AdminController
     {
         return Form::make(new DemoDistpicker(), function (Form $form) {
             $form->display('id');
-            $form->distpicker(['province', 'city', 'district'], 'China area')
+//            $form->distpicker(['province', 'city', 'district'], 'China area')
+//                ->detail('detail')
+//                ->coordinate(['longitude', 'latitude'])
+//                ->disableMap(false);
+
+            $form->vDistpicker('Distpick')
+                ->dist('province', 'city', 'district')
+                ->coordinate('latitude', 'longitude')
                 ->detail('detail')
-                ->coordinate(['longitude', 'latitude']);
-//                ->disableMap();
+                ->mapHeight(380)
+                ->disableRegions([440000])
+                ->mapZoom(11);
 
             $form->display('created_at');
             $form->display('updated_at');

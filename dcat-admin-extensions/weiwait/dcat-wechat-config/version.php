@@ -8,4 +8,7 @@ return [
     '2.0.0' => [
         '升级到easywechat 6'
     ],
+    '2.0.1' => [
+        'fixed bugs'
+    ],
 ];

@@ -52,6 +52,7 @@ class WechatAppletConfig extends Form
             WechatConfig::WECHAT_PAYMENT_KEY,
             WechatConfig::WECHAT_PAYMENT_CERT_PATH,
             WechatConfig::WECHAT_PAYMENT_KEY_PATH,
+            WechatConfig::WECHAT_PAYMENT_PLATFORM_PATH,
         ]);
     }
 }

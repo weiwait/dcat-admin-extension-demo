@@ -87,7 +87,12 @@ class DemoCropperController extends AdminController
 //            });
 
 //            $form->vList('images');
-            $form->vKeyValue('images', '键值')->serial()->sortable();
+            $form->vKeyValue('images', '选项')->serial()->sortable();
+
+            $form->vSelect('select', '答案')
+                ->options(['123', '456'])
+                ->concatKey()
+                ->optionsFromKeyValue('images');
 
             $form->display('created_at');
             $form->display('updated_at');

@@ -95,6 +95,12 @@ class DemoCropperController extends AdminController
                 ->optionsFromKeyValue('images')
                 ->required();
 
+            $form->vMultipleSelect('ms', '答案')
+                ->options(['123', '456'])
+                ->concatKey()
+                ->optionsFromKeyValue('images')
+                ->required();
+
             $form->display('created_at');
             $form->display('updated_at');
 

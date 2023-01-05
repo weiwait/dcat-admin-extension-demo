@@ -85,7 +85,8 @@ class DemoCropperController extends AdminController
 //                $form->vKeyValue('images')->sortable();
 //            });
 
-//            $form->vList('images');
+            $form->vList('list');
+            $form->vTags('tags');
             $form->vKeyValue('images', '选项')->serial()->sortable();
 
             $form->vSelect('select', '答案')

@@ -22,6 +22,9 @@ class WeiwaitIcon extends \Illuminate\Database\Eloquent\Model
         $stub = file_get_contents(__DIR__ . '/../../resources/assets/css/index.css');
 
         Storage::disk(config('admin.upload.disk'))
+            ->delete('icons/icon-svg.css');
+
+        Storage::disk(config('admin.upload.disk'))
             ->put('icons/icon-svg.css', $stub);
 
         WeiwaitIcon::query()

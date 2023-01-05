@@ -7,7 +7,6 @@
     "require": {
         "php": "^8.0",
         "dcat/laravel-admin": "^2.2",
-        "freyo/flysystem-qcloud-cos-v5": "^2.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "iidestiny/laravel-filesystem-oss": "^3.1",
@@ -16,7 +15,9 @@
         "league/flysystem": "^3.0",
         "mews/captcha": "^3.2",
         "overtrue/easy-sms": "^1.3",
+        "overtrue/laravel-filesystem-cos": "^3.1",
         "overtrue/laravel-filesystem-qiniu": "^2.1",
+        "qcloud_sts/qcloud-sts-sdk": "^3.0",
         "w7corp/easywechat": "^6.7"
     },
     "require-dev": {

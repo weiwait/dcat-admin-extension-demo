@@ -65,7 +65,6 @@ class DemoCropperController extends AdminController
             $form->display('id');
             $form->vFile('cropper2', '文件')->mimeTypes('video/*');
             $form->vImage('cropper', '裁剪')
-                ->large()
                 ->jpeg(1)
                 ->ratio(16 / 9)
                 ->resolution(1920, 1080)

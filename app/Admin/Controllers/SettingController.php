@@ -7,9 +7,9 @@ use Dcat\Admin\Layout\Content;
 use Dcat\Admin\Widgets\Tab;
 use Weiwait\DcatEasySms\Forms\SmsConfig;
 use Weiwait\DcatSmtp\Forms\SmtpConfig;
+use Weiwait\DcatVue\Forms\AuthSetting;
 use Weiwait\DcatVue\Forms\FilesystemConfig;
 use Weiwait\Wechat\Forms\WechatAppletConfig;
-use Weiwait\DcatAuth\Setting as AuthSetting;
 
 class SettingController extends Controller
 {

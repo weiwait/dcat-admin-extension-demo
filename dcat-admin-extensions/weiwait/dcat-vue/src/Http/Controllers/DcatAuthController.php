@@ -1,6 +1,6 @@
 <?php
 
-namespace Weiwait\DcatAuth\Http\Controllers;
+namespace Weiwait\DcatVue\Http\Controllers;
 
 use Dcat\Admin\Http\Controllers\AuthController;
 use Dcat\Admin\Layout\Content;
@@ -23,7 +23,7 @@ class DcatAuthController extends AuthController
             return redirect($this->getRedirectPath());
         }
 
-        return $content->full()->body(view('weiwait.dcat-auth::login', ['config' => $this->config]));
+        return $content->full()->body(view('weiwait.dcat-vue::login', ['config' => $this->config]));
     }
 
     public function postLogin(Request $request)

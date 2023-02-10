@@ -51,21 +51,22 @@
         ->accept('mime types');
         
     $form->vMutipleFile('files') // 关联文件系统配置-直传
-        ->accept('mime types');
+        ->mimeTypes('video/*');
         
     $form->vImage('image') // 关联文件系统配置-直传-裁剪
         ->ratio(16 / 9) // 固定裁剪比例
         ->large() // 放大裁剪框
         ->resolution(1920, 1080) // 重置图片分辨率
         ->jpeg(0.8) // 裁剪为jpeg格式, 参数为图片质量0-1
-        ->accept('mime types');
+        ->disableCropper() // 关闭裁剪弹窗
+        ->mimeTypes('image/*');
         
     $form->vMultipleImage('images') // 关联文件系统配置-直传-裁剪
         ->ratio(16 / 9) // 固定裁剪比例
         ->large() // 放大裁剪框
         ->resolution(1920, 1080) // 重置图片分辨率
         ->jpeg(0.8) // 裁剪为jpeg格式, 参数为图片质量0-1
-        ->accept('mime types');
+        ->mimeTypes('image/*');
         
     $form->vTags('tags'); // 标签
     
@@ -98,6 +99,23 @@
         ->options(['123', '456', 'A' => 'aaa']) // 选项
         ->concatKey('separator') // 显示键
         ->optionsFromKeyValue('kvs'); // 用于结合vKeyValue进行选项选择
+```
+
+##### 登录验证码
+![示例图片](https://github.com/weiwait/images/blob/main/dcat-auth.png?raw=true)
+
+```php
+class SettingController extends Controller
+{
+    public function index(Content $content): Content
+    {
+        $tab = Tab::make();
+        $tab->add('站点配置', new AuthSetting());
+
+        return $content->title('配置')
+            ->body($tab->withCard());
+    }
+}
 ```
 
 [comment]: <> (### Donate)

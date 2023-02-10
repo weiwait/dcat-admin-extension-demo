@@ -68,7 +68,7 @@ class DemoCropperController extends AdminController
                 ->jpeg(1)
                 ->ratio(16 / 9)
                 ->resolution(1920, 1080)
-                ->accept('images/png');
+                ->help('合适的各位医务人员还让他');
 //            $form->cropper('cropper2')->ratio(16 / 9)->help('支持多次调用');
             $form->image('image', '原生图片');
 //            $form->multipleCropper('images')->ratio(['1:1' => 1, '16:9' => 16/9])->jpeg()->limit(12);
@@ -86,6 +86,7 @@ class DemoCropperController extends AdminController
 //            });
 
             $form->vList('list');
+            $form->list('o_list');
             $form->vTags('tags');
             $form->vKeyValue('images', '选项')->serial()->sortable();
 

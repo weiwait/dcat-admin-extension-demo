@@ -22,9 +22,9 @@ class DemoCropperController extends AdminController
     {
         return Grid::make(new DemoCropper(), function (Grid $grid) {
             $grid->column('id')->sortable();
-            $grid->column('cropper')->image(height: 60);
-            $grid->column('cropper2')->image(height: 60);
-            $grid->column('image')->image(height: 60);
+            $grid->column('cropper', '图片')->image(height: 60);
+            $grid->column('cropper2', '图片')->image(height: 60);
+            $grid->column('image', '图片')->image(height: 60);
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
 

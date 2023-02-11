@@ -10,6 +10,8 @@ use Dcat\Admin\Http\Controllers\AdminController;
 
 class OrderableFirstController extends AdminController
 {
+    protected $title = '排序-降序';
+
     /**
      * Make a grid builder.
      *

@@ -11,6 +11,8 @@ use Dcat\Admin\Http\Controllers\AdminController;
 
 class OrderableSecondController extends AdminController
 {
+    protected $title = '排序-筛选后排序';
+
     /**
      * Make a grid builder.
      *
@@ -22,7 +24,7 @@ class OrderableSecondController extends AdminController
             $grid->model()->orderByDesc('order');
 
             $grid->column('id')->sortable();
-            $grid->column('orderable_first_id');
+            $grid->column('orderable_first_id', '排序限制');
             $grid->column('name');
             $grid->column('order')->when(request('orderable_first_id'), function ($obj) {
                 return $obj->sequencable();

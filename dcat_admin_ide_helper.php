@@ -239,6 +239,7 @@ namespace Dcat\Admin {
      * @method \Weiwait\DcatVue\Field\DateRange vDateRange(...$params)
      * @method \Weiwait\DcatVue\Field\Select vSelect(...$params)
      * @method \Weiwait\DcatVue\Field\MultipleSelect vMultipleSelect(...$params)
+     * @method \Weiwait\DcatVue\Field\Number vNumber(...$params)
      * @method \Weiwait\Distpicker\Form\Distpicker distpicker(...$params)
      * @method \Weiwait\DcatCropper\Form\Field\Cropper cropper(...$params)
      * @method \Weiwait\DcatCropper\Form\Field\MultipleCropper multipleCropper(...$params)

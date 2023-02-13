@@ -74,7 +74,7 @@ class DemoCropperController extends AdminController
 //            $form->multipleCropper('images')->ratio(['1:1' => 1, '16:9' => 16/9])->jpeg()->limit(12);
 
 //            $form->vMultipleImage('images')->options(['hello', 'world']);
-            $form->vDateRange('start', 'end', '日期范围')->required();
+            $form->vDateRange('start', 'end', '日期范围');
 
 //            $form->table('tables', function (Form\NestedForm $form) {
 //                $form->vImage('image');
@@ -92,14 +92,22 @@ class DemoCropperController extends AdminController
             $form->vSelect('select', '答案')
                 ->options(['123', '456'])
                 ->concatKey()
-                ->optionsFromKeyValue('images')
-                ->required();
+                ->optionsFromKeyValue('images');
 
             $form->vMultipleSelect('ms', '答案')
                 ->options(['123', '456'])
                 ->concatKey()
-                ->optionsFromKeyValue('images')
-                ->required();
+                ->optionsFromKeyValue('images');
+
+            $form->vNumber('number', '整数')
+                ->prepend('$')
+                ->bothButton()
+                ->step(2)
+                ->min(2)
+                ->max(88);
+
+            $form->vNumber('float', '浮点')
+                ->precision(2);
 
             $form->display('created_at');
             $form->display('updated_at');

@@ -3,11 +3,14 @@
 namespace App\Admin\Controllers;
 
 use App\Admin\Repositories\DemoCropper;
+use App\Models\DemoDistpicker;
+use App\Models\User;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Show;
 use Dcat\Admin\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Storage;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class DemoCropperController extends AdminController
 {
@@ -92,7 +95,8 @@ class DemoCropperController extends AdminController
             $form->vSelect('select', '答案')
                 ->options(['123', '456'])
                 ->concatKey()
-                ->optionsFromKeyValue('images');
+//                ->optionsFromKeyValue('images');
+                ->modelLoad(DemoDistpicker::class, 'id', 'province', ['number' => 'id'], 20);
 
             $form->vMultipleSelect('ms', '答案')
                 ->options(['123', '456'])
@@ -102,8 +106,6 @@ class DemoCropperController extends AdminController
             $form->vNumber('number', '整数')
                 ->prepend('$')
                 ->bothButton()
-                ->step(2)
-                ->min(2)
                 ->max(88);
 
             $form->vNumber('float', '浮点')

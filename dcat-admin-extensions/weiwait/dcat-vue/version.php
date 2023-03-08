@@ -107,4 +107,10 @@ return [
     '2.8.3' => [
         'fixed date range',
     ],
+    '2.8.4' => [
+        'fixed replace of multiple image',
+    ],
+    '2.8.5' => [
+        'fixed replace of multiple image',
+    ],
 ];

@@ -111,6 +111,14 @@ class DemoCropperController extends AdminController
             $form->vNumber('float', '浮点')
                 ->precision(2);
 
+            $form->vCheckbox('box', '多选盒')
+                ->options(['合格', 'wet个人工', 'wertger'])
+                ->watch('box', <<<JS
+                    (v, {self, store}) => {
+                        store.load('/admin').then(({data}) => console.log(data))
+                    }
+                JS);
+
             $form->display('created_at');
             $form->display('updated_at');
 

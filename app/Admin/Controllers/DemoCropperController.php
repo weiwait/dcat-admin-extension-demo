@@ -88,7 +88,15 @@ class DemoCropperController extends AdminController
 //                $form->vKeyValue('images')->sortable();
 //            });
 
-            $form->vList('list', '列表');
+            $form->vList('list', '列表')
+                ->watch('tags', <<<JS
+                    (target, form, store) => {
+                        store.request({
+                            method: 'GET',
+                            url: '/admin'
+                        }).then(res => console.log(res))
+                    }
+                JS);
             $form->vTags('tags', '标签');
             $form->vKeyValue('images', '选项')->serial()->sortable();
 
@@ -113,9 +121,9 @@ class DemoCropperController extends AdminController
 
             $form->vCheckbox('box', '多选盒')
                 ->options(['合格', 'wet个人工', 'wertger'])
-                ->watch('box', <<<JS
-                    (v, {self, store}) => {
-                        store.load('/admin').then(({data}) => console.log(data))
+                ->watch('number', <<<JS
+                    (target, store) => {
+                        console.log(target, store)
                     }
                 JS);
 

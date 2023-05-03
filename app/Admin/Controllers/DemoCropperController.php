@@ -122,8 +122,8 @@ class DemoCropperController extends AdminController
             $form->vCheckbox('box', '多选盒')
                 ->options(['合格', 'wet个人工', 'wertger'])
                 ->watch('number', <<<JS
-                    (target, store) => {
-                        console.log(target, store)
+                    (target, form, store) => {
+                        console.log(target, form, store)
                     }
                 JS);
 

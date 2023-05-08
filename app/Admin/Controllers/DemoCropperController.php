@@ -120,12 +120,16 @@ class DemoCropperController extends AdminController
                 ->precision(2);
 
             $form->vCheckbox('box', '多选盒')
-                ->options(['合格', 'wet个人工', 'wertger'])
+                ->options(['first', 'second', 'third'])
                 ->watch('number', <<<JS
                     (target, form, store) => {
                         console.log(target, form, store)
                     }
                 JS);
+
+            $form->vIcon('vic', '图标')
+                ->withColor('color_field')
+                ->default(['vic' => 'fa-angellist', 'color_field' => '#00DD77FF']);
 
             $form->display('created_at');
             $form->display('updated_at');

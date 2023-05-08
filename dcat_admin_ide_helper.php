@@ -227,7 +227,6 @@ namespace Dcat\Admin {
     class Show {}
 
     /**
-     * @method \Dcat\Admin\Form\Field\Icon oIcon(...$params)
      * @method \Weiwait\DcatVue\Field\File vFile(...$params)
      * @method \Weiwait\DcatVue\Field\MultipleFile vMultipleFile(...$params)
      * @method \Weiwait\DcatVue\Field\Image vImage(...$params)
@@ -241,6 +240,8 @@ namespace Dcat\Admin {
      * @method \Weiwait\DcatVue\Field\MultipleSelect vMultipleSelect(...$params)
      * @method \Weiwait\DcatVue\Field\Number vNumber(...$params)
      * @method \Weiwait\DcatVue\Field\Checkbox vCheckbox(...$params)
+     * @method \Weiwait\DcatVue\Field\Icon vIcon(...$params)
+     * @method \Dcat\Admin\Form\Field\Icon oIcon(...$params)
      * @method \Weiwait\Distpicker\Form\Distpicker distpicker(...$params)
      * @method \Weiwait\DcatCropper\Form\Field\Cropper cropper(...$params)
      * @method \Weiwait\DcatCropper\Form\Field\MultipleCropper multipleCropper(...$params)

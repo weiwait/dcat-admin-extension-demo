@@ -26,8 +26,8 @@ class DcatIconServiceProvider extends ServiceProvider
 	{
 		parent::init();
 
-		Form::extend('icon', Icon::class);
-		Form::extend('oIcon', Form\Field\Icon::class);
+//		Form::extend('icon', Icon::class);
+//		Form::extend('oIcon', Form\Field\Icon::class);
 
 		Admin::requireAssets('@weiwait.dcat-icon');
 

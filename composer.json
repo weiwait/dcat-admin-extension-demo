@@ -9,7 +9,6 @@
         "dcat/laravel-admin": "^2.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
-        "iidestiny/laravel-filesystem-oss": "^3.1",
         "laravel/framework": "^9.0",
         "laravel/tinker": "^2.5",
         "league/flysystem": "^3.0",
@@ -18,7 +17,8 @@
         "overtrue/laravel-filesystem-cos": "^3.1",
         "overtrue/laravel-filesystem-qiniu": "^2.1",
         "qcloud_sts/qcloud-sts-sdk": "^3.0",
-        "w7corp/easywechat": "^6.7"
+        "w7corp/easywechat": "^6.7",
+        "weiwait/laravel-filesystem-oss": "^4.0"
     },
     "require-dev": {
         "spatie/laravel-ignition": "^1.0",
@@ -70,5 +70,19 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "weiwait/laravel-filesystem-oss",
+                "version": "4.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/weiwait/laravel-filesystem-oss.git",
+                    "reference": "master"
+                }
+            }
+        }
+    ]
 }

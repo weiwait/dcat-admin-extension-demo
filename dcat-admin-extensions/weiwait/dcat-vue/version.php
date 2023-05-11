@@ -131,4 +131,22 @@ return [
     '2.11.0' => [
         "covered the icon field of form",
     ],
+    '2.12.0' => [
+        "supported laravel 10",
+    ],
+    '2.12.1' => [
+        "fixed bugs",
+    ],
+    '2.12.2' => [
+        "fixed bugs",
+    ],
+    '2.12.3' => [
+        "fixed bugs",
+    ],
+    '2.12.4' => [
+        "optimizing",
+    ],
+    '2.12.5' => [
+        "optimizing",
+    ],
 ];

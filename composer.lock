@@ -4,53 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c2656560e424b4a7e36782c07151ffbf",
+    "content-hash": "1cdcdbcbf068f6b68063a9a510e8425e",
     "packages": [
-        {
-            "name": "aliyuncs/oss-sdk-php",
-            "version": "v2.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/aliyun/aliyun-oss-php-sdk.git",
-                "reference": "572d0f8e099e8630ae7139ed3fdedb926c7a760f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/aliyun/aliyun-oss-php-sdk/zipball/572d0f8e099e8630ae7139ed3fdedb926c7a760f",
-                "reference": "572d0f8e099e8630ae7139ed3fdedb926c7a760f",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "*",
-                "satooshi/php-coveralls": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "OSS\\": "src/OSS"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Aliyuncs",
-                    "homepage": "http://www.aliyun.com"
-                }
-            ],
-            "description": "Aliyun OSS SDK for PHP",
-            "homepage": "http://www.aliyun.com/product/oss/",
-            "support": {
-                "issues": "https://github.com/aliyun/aliyun-oss-php-sdk/issues",
-                "source": "https://github.com/aliyun/aliyun-oss-php-sdk/tree/v2.6.0"
-            },
-            "time": "2022-08-03T08:06:01+00:00"
-        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.1.1",
@@ -1483,111 +1438,6 @@
                 }
             ],
             "time": "2022-10-26T14:07:24+00:00"
-        },
-        {
-            "name": "iidestiny/flysystem-oss",
-            "version": "4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/iiDestiny/flysystem-oss.git",
-                "reference": "8ca9712280e133a2342a13b04e05868be0bbd833"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/iiDestiny/flysystem-oss/zipball/8ca9712280e133a2342a13b04e05868be0bbd833",
-                "reference": "8ca9712280e133a2342a13b04e05868be0bbd833",
-                "shasum": ""
-            },
-            "require": {
-                "aliyuncs/oss-sdk-php": "^2.4",
-                "ext-curl": "*",
-                "ext-json": "*",
-                "ext-openssl": "*",
-                "league/flysystem": "^3.0",
-                "php": "^8.0.2"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.5",
-                "phpunit/phpunit": "^9.5",
-                "symfony/var-dumper": "^3.4"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Iidestiny\\Flysystem\\Oss\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "iidestiny",
-                    "email": "iidestiny@vip.qq.com"
-                }
-            ],
-            "description": "Flysystem adapter for the Oss storage.",
-            "keywords": [
-                "alioss",
-                "laravel",
-                "oss",
-                "阿里oss"
-            ],
-            "support": {
-                "issues": "https://github.com/iiDestiny/flysystem-oss/issues",
-                "source": "https://github.com/iiDestiny/flysystem-oss/tree/4.1"
-            },
-            "time": "2022-04-20T01:41:39+00:00"
-        },
-        {
-            "name": "iidestiny/laravel-filesystem-oss",
-            "version": "3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/iiDestiny/laravel-filesystem-oss.git",
-                "reference": "0274304287dbb95091264ba3be09c2fb3838066d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/iiDestiny/laravel-filesystem-oss/zipball/0274304287dbb95091264ba3be09c2fb3838066d",
-                "reference": "0274304287dbb95091264ba3be09c2fb3838066d",
-                "shasum": ""
-            },
-            "require": {
-                "iidestiny/flysystem-oss": "^4.1",
-                "laravel/framework": "^9.0",
-                "php": "^8.0.2"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Iidestiny\\LaravelFilesystemOss\\OssStorageServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Iidestiny\\LaravelFilesystemOss\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "iidestiny",
-                    "email": "iidestiny@vip.qq.com"
-                }
-            ],
-            "description": "Oss storage filesystem for Laravel.",
-            "support": {
-                "issues": "https://github.com/iiDestiny/laravel-filesystem-oss/issues",
-                "source": "https://github.com/iiDestiny/laravel-filesystem-oss/tree/3.1"
-            },
-            "time": "2022-04-20T01:48:06+00:00"
         },
         {
             "name": "intervention/image",
@@ -7819,6 +7669,16 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
+        },
+        {
+            "name": "weiwait/laravel-filesystem-oss",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weiwait/laravel-filesystem-oss.git",
+                "reference": "master"
+            },
+            "type": "library"
         }
     ],
     "packages-dev": [

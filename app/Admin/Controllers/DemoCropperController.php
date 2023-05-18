@@ -112,7 +112,6 @@ class DemoCropperController extends AdminController
                 ->optionsFromKeyValue('images');
 
             $form->vNumber('number', '整数')
-                ->prepend('$')
                 ->bothButton()
                 ->max(88);
 
@@ -130,6 +129,8 @@ class DemoCropperController extends AdminController
             $form->vIcon('vic', '图标')
                 ->withColor('color_field')
                 ->default(['vic' => 'fa-angellist', 'color_field' => '#00DD77FF']);
+
+            $form->vSku('skus');
 
             $form->display('created_at');
             $form->display('updated_at');
